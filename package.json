@@ -1,0 +1,50 @@
+{
+  "name": "@itinerisltd/trellis",
+  "description": "todo",
+  "version": "0.0.0",
+  "author": {
+    "name": "Tang Rufus",
+    "email": "tangrufus@gmail.com",
+    "url": "https://typist.tech"
+  },
+  "contributors": [
+    {
+      "name": "Itineris Limited",
+      "email": "hello@itineris.co.uk",
+      "url": "https://itineris.co.uk"
+    }
+  ],
+  "bugs": "https://github.com/itinerisltd/trellis-js/issues",
+  "dependencies": {
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/tslint": "^3",
+    "@types/node": "^10",
+    "ts-node": "^8",
+    "tslint": "^5",
+    "typescript": "^3.2"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "/lib"
+  ],
+  "homepage": "https://github.com/itinerisltd/trellis-js",
+  "keywords": [
+    "bedrock",
+    "trellis"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": "itinerisltd/trellis-js",
+  "scripts": {
+    "posttest": "tslint -p . -t stylish",
+    "prepack": "rm -rf lib && tsc -b",
+    "test": "echo NO TESTS",
+    "version": "npx doctoc README.md && git add README.md",
+    "release": "npx np && github_changelog_generator && git add CHANGELOG.md && git commit -m 'github_changelog_generator' && git push origin master"
+  },
+  "types": "lib/index.d.ts"
+}
